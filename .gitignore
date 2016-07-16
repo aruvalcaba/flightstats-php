@@ -30,3 +30,6 @@ composer.lock
 
 # OMG MAC OSX WHY?!
 .DS_Store
+
+# PHPUnit xml
+phpunit.xml
