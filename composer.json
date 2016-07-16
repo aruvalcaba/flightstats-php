@@ -1,0 +1,27 @@
+{
+    "name": "black-label/flightstats-php",
+    "description": "PHP library for FlightStats API",
+    "authors": [
+        {
+            "name": "Alan Ruvalcaba",
+            "email": "aruval3@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "require-dev" : {
+        "phpunit/phpunit" : "5.4.*"   
+    },
+    "autoload" : {
+        "psr-4" : {
+            "BlackLabel\\FlightStats\\" : "src/"
+        }
+    },
+    "autoload-dev" : {
+        "psr-4" : {
+            "BlackLabel\\FlightStats\\" : "tests/"
+        }
+    },
+    "minimum-stability" : "dev"
+}
