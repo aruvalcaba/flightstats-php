@@ -55,7 +55,7 @@ class FlightStatsClient
 
         if( count($params) > 0 )
         {
-            $options = $options + $params;
+            $options['query'] = $options['query'] + $params;
         }
         
         return $this->client->get($absoluteUrl,$options);
