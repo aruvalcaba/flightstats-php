@@ -40,6 +40,7 @@ class FetchDepartingFlightsWithDateTest extends QueryTest
     }
     
     /**
+     * Fetching flights with dates over a month will result in a response with an error.
      * @depends testFetchDepartingFlightsWithValidDate
      */
     public function testFetchDepartingFlightsWithValidInvalidDate()
