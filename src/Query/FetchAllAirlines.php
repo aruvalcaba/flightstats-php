@@ -10,7 +10,7 @@ class FetchAllAirlines extends Query
 {
     public function invoke(array $params =[])
     {
-        $route = 'v1/json/active';
+        $route = 'airlines/rest/v1/json/active';
 
         return $this->client->request($route);
     }
