@@ -11,5 +11,9 @@ class FetchAllAirlinesTest extends QueryTest
         $response = $query->invoke();
 
         $this->assertEquals(200,$response->getStatusCode());
+
+        $response = json_decode($response->getBody()->getContents(),true);
+
+        $this->assertArrayHasKey('airlines',$response);
     }
 }
