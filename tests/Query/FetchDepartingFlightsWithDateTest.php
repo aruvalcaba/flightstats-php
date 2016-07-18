@@ -2,6 +2,8 @@
 
 namespace BlackLabel\FlightStats\Query;
 
+use Faker\Factory as Faker;
+
 class FetchDepartingFlightsWithDateTest extends QueryTest
 {
     public function testFetchDepartingFlightsWithValidDate()
@@ -10,12 +12,17 @@ class FetchDepartingFlightsWithDateTest extends QueryTest
 
         $departureAirportCode = 'ORD';
         $arrivalAirportCode = 'LGA';
+ 
+        $faker = Faker::create();
 
-        $tomorrow = $this->carbon->tomorrow();
+        $futures = ['tomorrow','addWeek'];
 
-        $year = $tomorrow->year;
-        $month = $tomorrow->month;
-        $day = $tomorrow->day;
+        $future = $faker->randomElement($futures);
+        $futureDate = $this->carbon->$future();
+
+        $year = $futureDate->year;
+        $month = $futureDate->month;
+        $day = $futureDate->day;
 
         $params = [
             'departureAirportCode' => $departureAirportCode,
@@ -49,12 +56,20 @@ class FetchDepartingFlightsWithDateTest extends QueryTest
 
         $departureAirportCode = 'ORD';
         $arrivalAirportCode = 'LGA';
+ 
+        $faker = Faker::create();
 
-        $lastWeek = $this->carbon->subMonth(2);
+        $pasts = ['subMonth','subYear'];
 
-        $year = $lastWeek->year;
-        $month = $lastWeek->month;
-        $day = $lastWeek->day;
+        $past = $faker->randomElement($pasts);
+
+        $num = $faker->numberBetween(2,5);
+
+        $pastDate = $this->carbon->$past($num);
+
+        $year = $pastDate->year;
+        $month = $pastDate->month;
+        $day = $pastDate->day;
 
         $params = [
             'departureAirportCode' => $departureAirportCode,
