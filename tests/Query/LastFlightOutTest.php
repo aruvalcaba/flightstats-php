@@ -2,12 +2,12 @@
 
 namespace BlackLabel\FlightStats\Query;
 
-class FirstFlightOutTest extends ConnectFlightTest
+class LastFlightOutTest extends ConnectFlightTest
 {
     public function setUp()
     {
         parent::setUp();
 
-        $this->query = new FirstFlightOut($this->client);
+        $this->query = new LastFlightOut($this->client);
     }
 }

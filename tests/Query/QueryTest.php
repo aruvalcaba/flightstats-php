@@ -16,6 +16,8 @@ class QueryTest extends FlightStatsTest
     
     protected $carbon;
 
+    protected $query;
+    
     public function setUp()
     {
         parent::setUp();
