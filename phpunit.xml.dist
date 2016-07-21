@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/autoload.php">
+    colors="false"
+    convertErrorsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true"
+    stopOnFailure="true">
+
+    <testsuites>
+        <testsuite name='Client'>
+            <file>tests/FlightStatsClientTest.php</file>
+        </testsuite>
+        <testsuite name='Queries'>
+            <directory>tests/Query</directory>
+            <exclude>tests/Query/QueryTest.php</exclude>
+            <exclude>tests/Query/ConnectFlightTest.php</exclude>
+        </testsuite>
+    </testsuites>
+    
+    <php>
+        <env name='API_URL' value=''/>
+        <env name='APP_ID'  value=''/>
+        <env name='APP_KEY' value=''/>
+    </php>
+</phpunit>
