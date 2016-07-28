@@ -15,8 +15,8 @@ abstract class FetchFlightConnectionWithDateTime extends Query
     {
         $format = 'connections/rest/v2/json/%s/%s/to/%s/%s/%s/%s/%s/%s/%s';
         
-        $departureAirportCode = $params['departureAirportCode'];
-        $arrivalAirportCode = $params['arrivalAirportCode'];
+        $departureAirportCode = $params['departureAirport'];
+        $arrivalAirportCode = $params['arrivalAirport'];
         $year = $params['year'];
         $month = $params['month'];
         $day = $params['day'];
