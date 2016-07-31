@@ -1,6 +1,7 @@
 {
     "name": "black-label/flightstats-php",
     "description": "PHP library for FlightStats API",
+    "license" : "MIT",
     "authors": [
         {
             "name": "Alan Ruvalcaba",
