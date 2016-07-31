@@ -23,8 +23,8 @@ class ConnectFlightTest extends QueryTest
         $hour = $tomorrow->hour;
 
         $params = [
-            'departureAirportCode' => $departureAirportCode,
-            'arrivalAirportCode' => $arrivalAirportCode,
+            'departureAirport' => $departureAirportCode,
+            'arrivalAirport' => $arrivalAirportCode,
             'year' => $year,
             'month' => $month,
             'day' => $day,
@@ -67,8 +67,8 @@ class ConnectFlightTest extends QueryTest
         $hour = $tomorrow->hour;
 
         $params = [
-            'departureAirportCode' => $departureAirportCode,
-            'arrivalAirportCode' => $arrivalAirportCode,
+            'departureAirport' => $departureAirportCode,
+            'arrivalAirport' => $arrivalAirportCode,
             'year' => $year,
             'month' => $month,
             'day' => $day,
