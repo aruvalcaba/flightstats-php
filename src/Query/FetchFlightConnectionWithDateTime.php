@@ -25,7 +25,7 @@ abstract class FetchFlightConnectionWithDateTime extends Query
 
         $route = sprintf($format,$this->method,$departureAirportCode,$arrivalAirportCode,$this->dateMethod,$year,$month,$day,$hour,$minute);
 
-        $requiredKeys = ['departureAirportCode','arrivalAirportCode','year','month','day','hour','minute'];
+        $requiredKeys = ['departureAirport','arrivalAirport','year','month','day','hour','minute'];
 
         $requiredParams = \BlackLabel\array_pull($params,$requiredKeys);
 
