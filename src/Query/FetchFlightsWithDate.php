@@ -18,6 +18,10 @@ abstract class FetchFlightsWithDate extends Query
 
         $route = sprintf($format,$departureAirportCode,$arrivalAirportCode,$this->method,$year,$month,$day);
 
-        return $this->client->request($route);
+        $requiredKeys = ['departureAirportCode','arrivalAirportCode','year','month','day'];
+
+        $requiredParams = \BlackLabel\array_pull($params,$requiredKeys);
+
+        return $this->client->request($route,$params);
     }
 }
