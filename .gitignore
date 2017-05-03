@@ -33,3 +33,4 @@ composer.lock
 
 # PHPUnit xml
 phpunit.xml
+/nbproject

@@ -2,6 +2,8 @@
 
 namespace BlackLabel\FlightStats\Query;
 
+use function BlackLabel\array_pull;
+
 abstract class FetchFlightsWithDate extends Query
 {
     protected $method;
@@ -20,7 +22,7 @@ abstract class FetchFlightsWithDate extends Query
 
         $requiredKeys = ['departureAirportCode','arrivalAirportCode','year','month','day'];
 
-        $requiredParams = \BlackLabel\array_pull($params,$requiredKeys);
+        $requiredParams = array_pull($params,$requiredKeys);
 
         return $this->client->request($route,$params);
     }
