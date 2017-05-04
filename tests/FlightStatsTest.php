@@ -2,9 +2,9 @@
 
 namespace BlackLabel\FlightStats;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class FlightStatsTest extends PHPUnit_Framework_TestCase
+abstract class FlightStatsTest extends TestCase
 {
     protected $apiUrl;
 

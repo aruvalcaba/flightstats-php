@@ -37,7 +37,7 @@ class FlightStatsClientTest extends FlightStatsTest
      */
     public function testConstructWithInCompleteConfig(array $config)
     {
-        $this->setExpectedException(IncompleteClientConfigException::class);
+        $this->expectException(IncompleteClientConfigException::class);
 
         $httpClient = new Client();
 
@@ -49,9 +49,11 @@ class FlightStatsClientTest extends FlightStatsTest
      * @depends testConstructWithInCompleteConfig
      */
     public function testConstructWithCompleteConfig(array $config)
-    {
+    {   
         $httpClient = new Client();
         
         $client = new FlightStatsClient($httpClient,$this->apiUrl,$config);
+        
+        $this->assertNotNull($client);
     }
 }

@@ -10,10 +10,13 @@ use BlackLabel\FlightStats\FlightStatsTest;
 
 use BlackLabel\FlightStats\FlightStatsClient;
 
-class QueryTest extends FlightStatsTest
+abstract class QueryTest extends FlightStatsTest
 {
     protected $client;
     
+    /**
+     * @var Carbon
+     */
     protected $carbon;
 
     protected $query;
